@@ -36,3 +36,10 @@
     Abre o conseole do navegador >> Rede >> opcao XRH >>Seleciona a pagina que fez a requisicao
     Proucra o X-access-COntent >> copia ele e joga no site jwt e ve as infroamçoes
     Para usar no projeto Intalar bibiloteca npm i jwt-decode
+11-pode se criar variaveis globais em src:enviroments
+
+12-proteção de rotas
+    ng g guard nome da guarda
+    option can load
+    criar constrctor de router e com metodo para esta verificar se esta logado passando parametr do caminho se falso
+    Denro do aap-routing passar função CanLaod nas rotas que precisam ser protegidas

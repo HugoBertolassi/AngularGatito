@@ -42,4 +42,26 @@
     ng g guard nome da guarda
     option can load
     criar constrctor de router e com metodo para esta verificar se esta logado passando parametr do caminho se falso
-    Denro do aap-routing passar função CanLaod nas rotas que precisam ser protegidas
+    Denro do aap-routing passar função CanLaod nas rotas que precisam ser protegidas com o o nome do guard
+13-Interceptor
+    ng g interceptor nome
+    serve para interceptar toda requisiçaõ http que sai da aplicação e permite alterar
+    Criase a logica
+    Registra o interceptor no angular
+        dentro do modulo que vai ter o interceptro: dentro do Module>> criar providers
+        providers:[
+            {
+                provide:HTTP_INTERCEPTORS,
+                useClass: NOME INTERCEPTOR,
+                multi:true,
+            }
+        ]
+    Colocar no app module o import do modulo que tem a autenticacao
+14-Resolver
+    o resolver é um serviço que implementa o resolve que ´o serviço executado antes da rota e o componente ser renderizado;
+    Assim utiliza para carregar os dados da lista
+    Inserir o resover dentro do  path o module da pasta que esta chamando o resolver com o nome da propriedade que vai recceber o valor do resolver e disponibilzar para a aplicção
+    ex:resolve:{animais:ListaAnimaisResolver}
+15-Build producao
+  npm i -g http-server
+  ng build --prod
